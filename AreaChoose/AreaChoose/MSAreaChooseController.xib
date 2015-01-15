@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MSAreaChooseController">
+            <connections>
+                <outlet property="searchBar" destination="XZk-Lh-s3e" id="52c-ar-bz3"/>
+                <outlet property="searchDisplayController" destination="rUH-sJ-8wx" id="En5-QB-E1J"/>
+                <outlet property="view" destination="alf-vm-fTk" id="G7k-vi-fRx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <searchDisplayController id="rUH-sJ-8wx">
+            <connections>
+                <outlet property="delegate" destination="-1" id="4zl-90-bo5"/>
+                <outlet property="searchBar" destination="XZk-Lh-s3e" id="uTO-g3-Uhg"/>
+                <outlet property="searchContentsController" destination="-1" id="4qI-CO-EbT"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="gwW-Lm-dRE"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="7yD-Ia-I0o"/>
+            </connections>
+        </searchDisplayController>
+        <view contentMode="scaleToFill" id="alf-vm-fTk">
+            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="请输入汉字或拼音" translatesAutoresizingMaskIntoConstraints="NO" id="XZk-Lh-s3e">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4mQ-jA-ers"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="YgV-zQ-z9o"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="myH-3A-Ht6">
+                    <rect key="frame" x="0.0" y="44" width="320" height="460"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gbb-bD-l3m"/>
+                        <outlet property="delegate" destination="-1" id="239-GT-5Nk"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XZk-Lh-s3e" firstAttribute="top" secondItem="alf-vm-fTk" secondAttribute="top" id="Fja-j7-DEl"/>
+                <constraint firstItem="myH-3A-Ht6" firstAttribute="leading" secondItem="alf-vm-fTk" secondAttribute="leading" id="Q4U-m5-62e"/>
+                <constraint firstItem="XZk-Lh-s3e" firstAttribute="leading" secondItem="alf-vm-fTk" secondAttribute="leading" id="YsI-lZ-6kf"/>
+                <constraint firstItem="myH-3A-Ht6" firstAttribute="top" secondItem="XZk-Lh-s3e" secondAttribute="bottom" id="cIf-CP-WU7"/>
+                <constraint firstAttribute="bottom" secondItem="myH-3A-Ht6" secondAttribute="bottom" id="hHw-cA-8vX"/>
+                <constraint firstAttribute="trailing" secondItem="XZk-Lh-s3e" secondAttribute="trailing" id="jsl-Q2-q0p"/>
+                <constraint firstAttribute="trailing" secondItem="myH-3A-Ht6" secondAttribute="trailing" id="y4c-nf-JIO"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
